@@ -88,6 +88,10 @@ a:hover {
   gap: 30px;
 }
 
+.sidebar .profile {
+  text-align: center;
+}
+
 .sidebar .profile img {
   width: 120px;
   height: 120px;
