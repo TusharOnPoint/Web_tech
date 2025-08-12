@@ -13,7 +13,6 @@
     --radius: 10px;
 }
 
-/* Reset & base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -40,7 +39,7 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Utility layout */
+/* layout */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -264,10 +263,10 @@ nav.scrolled {
 .profile-img:hover {
     transform: translateY(-6px) scale(1.05);
     box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent), 0 0 40px var(--accent), 0 0 60px var(--accent);
-    animation: pulse-glow 1.5s ease-in-out infinite alternate;
+    animation: profile-glow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes pulse-glow {
+@keyframes profile-glow {
     from {
         box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent), 0 0 40px var(--accent), 0 0 60px var(--accent);
     }
@@ -578,7 +577,7 @@ nav.scrolled {
     letter-spacing: 0.03em;
 }
 
-/* Contact Items (phone, email, location) */
+/* Contact items*/
 .contact-item {
     display: flex;
     align-items: center;
@@ -588,7 +587,7 @@ nav.scrolled {
     transition: color 0.3s ease;
 }
 
-/* Contact Icons */
+/* Contact icons */
 .contact-item svg,
 .contact-item .icon {
     color: #00ff9d;
@@ -597,7 +596,7 @@ nav.scrolled {
     transition: color 0.3s ease;
 }
 
-/* Contact Text */
+/* Contact text */
 .contact-item a,
 .contact-item span {
     color: #d0d0d0;
@@ -659,7 +658,7 @@ nav.scrolled {
     color: #fff;
 }
 
-/* Modal Overlay */
+/* Modal container */
 .modal {
     position: fixed;
     inset: 0;
@@ -667,10 +666,8 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     background: rgba(2, 2, 6, 0.7);
-    /* slightly darker overlay */
     z-index: 1500;
     padding: 1rem;
-    /* space so large content doesn't hit the screen edges */
 }
 
 .modal.show {
@@ -683,11 +680,8 @@ nav.scrolled {
     padding: 1.4rem;
     border-radius: 14px;
     width: clamp(320px, 90vw, 900px);
-    /* wider so images/text fit well */
     max-height: 90vh;
-    /* taller for large previews */
     overflow-y: auto;
-    /* scroll if needed */
     border: 1.5px solid rgba(0, 255, 157, 0.12);
     box-shadow: 0 8px 28px rgba(0, 255, 157, 0.12);
     position: relative;
@@ -696,7 +690,6 @@ nav.scrolled {
     scrollbar-color: rgba(0, 255, 157, 0.4) transparent;
 }
 
-/* Nice scrolling on Webkit browsers */
 .modal-content::-webkit-scrollbar {
     width: 6px;
 }
@@ -710,7 +703,7 @@ nav.scrolled {
     background: transparent;
 }
 
-/* Slight zoom-in animation when modal appears */
+/* zoom-in animation */
 @keyframes fadeInScale {
     from {
         transform: scale(0.95);
@@ -740,7 +733,7 @@ nav.scrolled {
     color: #00ff9d;
 }
 
-/* Inside Modal: Images */
+/* Images */
 .modal-content img {
     max-width: 100%;
     height: auto;
@@ -749,7 +742,7 @@ nav.scrolled {
     display: block;
 }
 
-/* Inside Modal: GitHub Link */
+/* GitHub Link */
 .project-github-link {
     display: inline-flex;
     align-items: center;
@@ -812,7 +805,7 @@ nav.scrolled {
         gap: .5rem;
         background: rgba(12, 12, 12, 0.98);
         padding: .6rem;
-        /* border-radius: 8px; */
+        border-radius: 8px;
         width: 220px;
     }
 
@@ -855,11 +848,10 @@ nav.scrolled {
     }
 }
 
-/* accessibility focus */
-a:focus,
+/* a:focus,
 button:focus,
 .project-open:focus {
     outline: 3px solid rgba(0, 255, 157, 0.14);
     outline-offset: 3px;
     border-radius: 8px;
-}
+} */
